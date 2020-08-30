@@ -22,3 +22,8 @@ In BruteForce.java file have to change the fileName and destination path to extr
     private final String fileName = "D:\\Meyvan\\sample\\assignment.zip";
     private final String destPath = "D:\\Meyvan\\sample\\assignment\\data_template";
 ```
+## Output
+
+```Java8
+Password cracked in 59.59705 sec. Password is = Twg48wTMSu. Check the directory D:\Meyvan\sample\assignment\data_template zip files are extracted successfully... : )
+```
