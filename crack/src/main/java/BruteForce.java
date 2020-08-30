@@ -13,6 +13,10 @@ class BruteForce implements Runnable {
     private static boolean DONE = false;
     private String found;
     private final String psHint = "Twg48wT";
+//  Change the fileName and destination path as per yours needs
+    private final String fileName = "D:\\Meyvan\\sample\\assignment.zip";
+    private final String destPath = "D:\\Meyvan\\sample\\assignment\\data_template";
+
 
     public BruteForce(int s, int e) throws NoSuchAlgorithmException {
         start = s;
@@ -38,11 +42,8 @@ class BruteForce implements Runnable {
         }
 
     }
-// Change the directory to ur files directory  
-    String fileName = "D:\\Meyvan\\sample\\assignment.zip";
-    String destPath = "D:\\Meyvan\\sample\\assignment\\data_template";
-    ZipFile zipFile;
 
+    ZipFile zipFile;
     {
         try {
             zipFile = new ZipFile(fileName);
@@ -79,7 +80,7 @@ class BruteForce implements Runnable {
         return filePath.substring(0, filePath.lastIndexOf("."));
     }
 
-//   Ignoring the exception while matching the password
+    //   Ignoring the exception while matching the password
     public static void ignoringExc(RunnableExc r) {
         try {
             r.run();
@@ -92,7 +93,7 @@ class BruteForce implements Runnable {
         void run() throws Exception;
     }
 
-//  Running threads
+    //  Running threads
     @Override
     public void run() {
 
@@ -103,7 +104,7 @@ class BruteForce implements Runnable {
         }
         if (DONE) {
             long duration = System.currentTimeMillis() - Crack.START_TIME;
-            System.out.println("Password cracked in " + TimeUnit.MILLISECONDS.toSeconds(duration) + "." + TimeUnit.MILLISECONDS.toMillis(duration) + " sec. Password was = " + found);
+            System.out.println("Password cracked in " + TimeUnit.MILLISECONDS.toSeconds(duration) + "." + TimeUnit.MILLISECONDS.toMillis(duration) + " sec. Password is = " + found + ". Check the directory " + destPath + " zip files are extracted successfully... : )");
         } else {
             System.out.println("Password not cracked for subset [" + start + ", " + end + "]");
         }
