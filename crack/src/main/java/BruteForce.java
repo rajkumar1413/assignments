@@ -38,7 +38,7 @@ class BruteForce implements Runnable {
         }
 
     }
-
+// Change the directory to ur files directory  
     String fileName = "D:\\Meyvan\\sample\\assignment.zip";
     String destPath = "D:\\Meyvan\\sample\\assignment\\data_template";
     ZipFile zipFile;
